@@ -26,7 +26,7 @@ class TweedsController < ApplicationController
 
   def update
     if @tweed.update(tweed_params)
-      redirect_to tweed_path(@tweed), notice : "Tweed was successfully updated."
+      redirect_to tweed_path(@tweed), notice: "Tweed was successfully updated."
     else
       render :edit
     end
@@ -45,4 +45,5 @@ class TweedsController < ApplicationController
 
   def tweed_params
     params.require(:tweed).permit(:content, :image_url)
+  end
 end

@@ -1,0 +1,16 @@
+<%= form_for(@tweed) do |f| %>
+  <p>
+    <%= f.label :content %>
+    <%= f.text_area :content, size: "20x30" %>
+
+    <% #if @tweed.image_url.count != 0 %>
+    <img src="<%= @tweed.image_url %>" alt=""/>
+    <% #end %>
+
+    <%= f.label "Image" %>
+    <%= f.text_field :image_url %>
+
+    <%= f.submit class: "button" %>
+  </p>
+
+<% end %>

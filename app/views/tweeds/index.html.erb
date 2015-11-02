@@ -1,0 +1,10 @@
+
+  <% @tweeds.each do |tweed| %>
+    <div class="tweed">
+      <%= link_to tweed.content, tweed_path(tweed) %>
+      <img src="<%= tweed.image_url %>"" alt="tweed_<%= tweed.id %> image" />
+      <%= link_to "Edit", edit_tweed_path(tweed), class: "button" %>
+      <%= link_to "Delete", tweed_path(tweed), method: :delete, class: "button danger" %>
+    </div>
+
+  <% end %>

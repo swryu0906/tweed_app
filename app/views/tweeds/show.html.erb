@@ -1,0 +1,7 @@
+<h2><%= @tweed.content %></h2>
+
+<img src="<%= @tweed.image_url %>" alt="tweed image" />
+
+<%= link_to "Edit", edit_tweed_path(@tweed), class: "button" %>
+<%= link_to "Delete", tweed_path(@tweed), class: "button danger" %>
+<%= link_to "Go back to Tweeds", tweeds_path, class: "button" %>

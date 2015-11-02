@@ -8,7 +8,28 @@
 </head>
 <body>
 
-<%= yield %>
+  <div id="container">
+    <div class="header">
+      <h1><%= link_to "Tweed.r", tweeds_path %></h1>
+      <%= link_to "New Tweed", new_tweed_path %>
+    </div>
+    <div id="main">
+
+      <p><%= notice %></p>
+
+      <%= yield %>
+
+    </div>
+    <div id="footer">
+      <%= link_to "About", "#" %>
+      <%= link_to "Help", "#" %>
+      <%= link_to "Terms", "#" %>
+      <%= link_to "Privacy", "#" %>
+      <%= link_to "Developer", "#" %>
+      <%= link_to "Jobs", "#" %>
+    </div><!-- /.footer -->
+  </div><!-- /.container -->
+
 
 </body>
 </html>
