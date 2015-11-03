@@ -2,6 +2,16 @@
 
 <img src="<%= @tweed.image_url %>" alt="tweed image" />
 
+
+<%= render partial: 'comments/form' %>
+
+
+<h3>Comments</h3>
+
+<%= render partial: 'tweeds/comment', collection: @tweed.comments %>
+
+
+
 <%= link_to "Edit", edit_tweed_path(@tweed), class: "button" %>
 <%= link_to "Delete", tweed_path(@tweed), class: "button danger" %>
 <%= link_to "Go back to Tweeds", tweeds_path, class: "button" %>
